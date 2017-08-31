@@ -57,12 +57,16 @@ def update_feed(feed_url,feed_json_base):
     with open(json_path,"w") as f:
         print(s,file=f)
 
-if not os.path.exists(os.path.join(THIS,"yle")):
-    os.mkdir(os.path.join(THIS,"yle"))
-    
-update_feed("https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_UUTISET","yle/yle-fi")
-update_feed("https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_SELKOUUTISET","yle/yle-selko")
-update_feed("https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_NEWS","yle/yle-en")
-update_feed("https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_SAPMI","yle/yle-saami")
-update_feed("https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_NOVOSTI","yle/yle-ru")
-update_feed("https://svenska.yle.fi/nyheter/senaste-nytt.rss","yle/yle-sv")
+try:
+    if not os.path.exists(os.path.join(THIS,"yle")):
+        os.mkdir(os.path.join(THIS,"yle"))
+
+    update_feed("https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_UUTISET","yle/yle-fi")
+    update_feed("https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_SELKOUUTISET","yle/yle-selko")
+    update_feed("https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_NEWS","yle/yle-en")
+    update_feed("https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_SAPMI","yle/yle-saami")
+    update_feed("https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_NOVOSTI","yle/yle-ru")
+    update_feed("https://svenska.yle.fi/nyheter/senaste-nytt.rss","yle/yle-sv")
+except:
+    logging.exception("uaaaa")
+
