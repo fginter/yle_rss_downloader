@@ -50,7 +50,8 @@ def update_feed(feed_url,feed_json_base):
         else:
             pass
             #print("Skipping news from", dt, file=sys.stderr)
-    logging.info("{} appended {} now have {}\n".format(feed_json_base, appended, len(news)))
+    if appended>0:
+        logging.info("{} appended {} now have {}\n".format(feed_json_base, appended, len(news)))
 
     #And now we should have it all
     s=json.dumps(news,indent=4)
@@ -58,6 +59,7 @@ def update_feed(feed_url,feed_json_base):
         print(s,file=f)
 
 try:
+    logging.info("      ********** RUN ************\n\n")
     if not os.path.exists(os.path.join(THIS,"yle")):
         os.mkdir(os.path.join(THIS,"yle"))
 
