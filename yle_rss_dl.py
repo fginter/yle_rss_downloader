@@ -107,7 +107,7 @@ try:
     update_feed("https://www.mtv.fi/api/feed/rss/urheilu","mtv/mtv-sport",True)
     update_feed("http://www.suomenuutiset.fi/?feed=rss2","persut/persut",True)
     update_feed("https://www.karjalainen.fi/component/obrss/karjalainen-uutiskirje","karjalainen/karjalainen",True)
-    update_feed("https://www.aamulehti.fi/?feed=uutiset&o=Tuoreimmat&k=0&ma=0&c=9,6,2,8,4,11,7,3,10,5","al/al",True)
+    #update_feed("https://www.aamulehti.fi/?feed=uutiset&o=Tuoreimmat&k=0&ma=0&c=9,6,2,8,4,11,7,3,10,5","al/al",True) # dead link
     update_feed("https://ls24.fi/rss","lansisuomi/lansisuomi-uutis",True)
     update_feed("https://ls24.fi/urheilu/rss","lansisuomi/lansisuomi-sport",True)
     update_feed("https://ls24.fi/raumalainen/rss","raumalainen/raumalainen",True)
@@ -115,12 +115,24 @@ try:
     update_feed("https://www.kainuunsanomat.fi/feed/kaikki-uutiset?lehti=ylä-kainuu","ylakainuu/ylakainuu",True)
     update_feed("https://feeds.kauppalehti.fi/rss/main","kl/kl",True)
     update_feed("http://www.kaleva.fi/rss/show/","kaleva/kaleva",True)
-    update_feed("https://www.lapinkansa.fi/?feed=uutiset&o=Lapin%20Kansan%2010%20tuoreinta%20maksutonta%20uutisartikkelia&k=0&ma=2&c=3,2,16,17,18,19,21,22,28,23,24","lapinkansa/lapinkansa",True)
+    update_feed("https://www.lapinkansa.fi/feedit/rss/newest-free/","lapinkansa/lapinkansa",True)
     update_feed("https://www.is.fi/rss/tuoreimmat.xml","is/is",True)
     update_feed("https://www.kp24.fi/feed","kp24/kp24",True)
-    update_feed("https://www.satakunnankansa.fi/?feed=uutiset&o=Tuoreimmat%20uutiset&k=0&ma=0&c=11,8,2,7,12,5,10,4,3,6","skunnank/skunnank",True)
+    #update_feed("https://www.satakunnankansa.fi/?feed=uutiset&o=Tuoreimmat%20uutiset&k=0&ma=0&c=11,8,2,7,12,5,10,4,3,6","skunnank/skunnank",True) # dead link
     update_feed("https://www.jatkoaika.com/rss/index.rss", "jatkoaika/jatkoaika", True)
     update_feed("https://www.hbl.fi/rss.xml", "hbl/hbl", True)
+
+    # new feeds
+    update_feed("https://www.talouselama.fi/api/feed/v2/rss/te", "talouselama/talouselama", True)
+    update_feed("https://www.kansanuutiset.fi/feed", "kansanuutiset/kansanuutiset", True)
+    update_feed("https://www.sss.fi/feed","salon/salon", True)
+    update_feed("https://www.suomenmaa.fi/neo/neoproxy.dll?tem=rss_neo","suomenmaa/suomenmaa", True)
+    update_feed("https://www.ts.fi/rss.xml","ts/ts", True)
+    update_feed("https://www.verkkouutiset.fi/rss","verkkouutiset/verkkouutiset", True)
+    update_feed("https://www.alandstidningen.ax/rss/allt","alands/alands", True)
+    update_feed("https://www.nyan.ax/rss","nyan/nyan", True)
+    update_feed("https://news.abounderrattelser.fi/rss","abou/abou", True)
+
     
 except:
     logging.exception("uaaaa")
